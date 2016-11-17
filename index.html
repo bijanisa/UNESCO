@@ -13,7 +13,9 @@
    <div class="ct-chart ct-golden-section" id="chart2"></div>
 
 <script>
+
   // Initialize a Pie chart
+  
 var data = {
   labels: ['Bananas', 'Apples', 'Grapes'],
   series: [20, 15, 40]
@@ -25,6 +27,15 @@ new Chartist.Pie('.ct-chart', data, {
   labelInterpolationFnc: function(value) {
     return Math.round(value / data.series.reduce(sum) * 100) + '%';
   }
+});
+
+  // Initialize a Distributed Bar Chart
+  
+new Chartist.Bar('.ct-chart', {
+  labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+  series: [20, 60, 120, 200, 180, 20, 10]
+}, {
+  distributeSeries: true
 });
 
 
