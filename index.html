@@ -13,18 +13,34 @@
    <div class="ct-chart ct-golden-section" id="chart2"></div>
 
 <script>
-  // Initialize a Line chart in the container with the ID chart1
+  // Initialize a Pie chart
 var data = {
-  series: [5, 3, 4]
+  labels: ['Bananas', 'Apples', 'Grapes'],
+  series: [20, 15, 40]
 };
 
-var sum = function(a, b) { return a + b };
-
-new Chartist.Pie('.ct-chart', data, {
+var options = {
   labelInterpolationFnc: function(value) {
-    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+    return value[0]
   }
-});
+};
+
+var responsiveOptions = [
+  ['screen and (min-width: 640px)', {
+    chartPadding: 30,
+    labelOffset: 100,
+    labelDirection: 'explode',
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }],
+  ['screen and (min-width: 1024px)', {
+    labelOffset: 80,
+    chartPadding: 20
+  }]
+];
+
+new Chartist.Pie('.ct-chart', data, options, responsiveOptions);
 
 
 </script>
