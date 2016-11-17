@@ -8,45 +8,23 @@
   <body>
     <!-- Site content goes here !-->
     <script src="bower_components/chartist/dist/chartist.min.js"></script>
-  
-   <div class="ct-chart ct-square" id="chart1"></div>
-   <div class="ct-chart ct-square" id="chart2"></div>
+
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<div class="ct-chart ct-golden-section" id="chart2"></div>
 
 <script>
+  // Initialize a Line chart in the container with the ID chart1
+  new Chartist.Line('#chart1', {
+    labels: [1, 2, 3, 4],
+    series: [[100, 120, 180, 200]]
+  });
 
-  // Initialize a Pie chart
-  
-var data = {
-  labels: ['Bananas', 'Apples', 'Grapes'],
-  series: [20, 15, 40]
-};
-
-var options = {
-  width: 300,
-  labelInterpolationFnc: function(value) {
-    return value[0]
-  }
-};
-var responsiveOptions = [
-  ['screen and (min-width: 640px)', {
-    chartPadding: 30,
-    labelOffset: 100,
-    labelDirection: 'explode',
-    labelInterpolationFnc: function(value) {
-      return value;
-    }
-  }],
-  ['screen and (min-width: 1024px)', {
-    labelOffset: 80,
-    chartPadding: 20
-  }]
-];
-
-new Chartist.Pie('.ct-chart', data, options, responsiveOptions);
-
-
-
-
+  // Initialize a Line chart in the container with the ID chart2
+  new Chartist.Bar('#chart2', {
+    labels: [1, 2, 3, 4],
+    series: [[5, 2, 8, 3]]
+  });
 </script>
-  </body>
+    
+    </body>
 </html>
