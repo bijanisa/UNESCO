@@ -12,7 +12,25 @@
 <div class="ct-chart ct-golden-section" id="chart1"></div>
 <div class="ct-chart ct-golden-section" id="chart2"></div>
 
-<script type="text/javascript" src="pie1.js"></script>
-<script type="text/javascript" src="bar1.js"></script>
+<script>
+  // Initialize a Distributed Bar chart in the container with the ID chart1
+
+new Chartist.Bar('#chart1', {
+  labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+  series: [20, 60, 120, 200, 180, 20, 10]
+}, {
+  distributeSeries: true
+});
+  // Initialize a Line chart in the container with the ID chart2
+new Chartist.Pie('#chart2', {
+  series: [20, 10, 30, 40]
+}, {
+  donut: true,
+  donutWidth: 60,
+  startAngle: 270,
+  total: 200,
+  showLabel: false
+});
+</script>
     </body>
 </html>
