@@ -1,6 +1,6 @@
 /* unvisited link */
 a:link {
-    color: red;
+    color: black;
 }
 
 /* visited link */
@@ -15,7 +15,7 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: blue;
+    color: black;
 }
 
 a:link {
@@ -43,7 +43,7 @@ h2 {
 }
 
 h3 {
-    text-align: right;
+    text-align: center;
 }
 
 #chart1 {
@@ -54,12 +54,11 @@ h3 {
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: 2px solid #000000;
+    padding: 16px 32px;
+    font-variant: small-caps;
 }
+
+.button:hover {background-color: #e7e7e7;}
