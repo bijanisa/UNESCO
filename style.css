@@ -46,6 +46,9 @@ h3 {
     text-align: right;
 }
 
-div {
-    align: center;
+.chart1 {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
