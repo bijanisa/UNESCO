@@ -43,3 +43,7 @@ with open('aughties.json', 'w') as f:
 with open('teensies.json', 'w') as f:
     f.write(json.dumps(teensies))
     f.close()
+
+with open('data.json', 'w') as f:
+    f.write(json.dumps(data))
+    f.close()
