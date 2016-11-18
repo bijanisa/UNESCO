@@ -58,7 +58,7 @@ h3 {
     color: black;
     border: 2px solid #000000;
     padding: 16px 32px;
-    text-transform: uppercase;
+    font-variant: small-caps;
 }
 
 .button:hover {background-color: #e7e7e7;}
