@@ -1,6 +1,6 @@
 /* unvisited link */
 a:link {
-    color: red;
+    color: black;
 }
 
 /* visited link */
@@ -15,7 +15,7 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: blue;
+    color: black;
 }
 
 a:link {
@@ -56,7 +56,7 @@ h3 {
 .button {
     background-color: white;
     color: black;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #000000;
 }
 
 .button:hover {background-color: #e7e7e7;}
