@@ -49,7 +49,9 @@ teensies.forEach(function(el) {
 data['series'] = [countAfrica, countArabStates, countAsiaAndThePacific, countEuropeAndNorthAmerica, countLatinAmericaAndTheCaribbean]
 new Chartist.Bar('#chart1', data,
  {
-  distributeSeries: true
+  distributeSeries: true,
+    low: 0,
+  high: 200
 });
   
 </script>
